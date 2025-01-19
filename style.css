@@ -1,0 +1,72 @@
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 470px;
+    margin: auto;
+
+}
+.form__input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+input{
+    border: 3px solid #ABCDEF;
+    margin: 5px;
+    padding: 5px;
+    width: 220px;
+}
+
+input::placeholder{
+    color:	#C0C0C0;
+    font-style: italic;
+}
+
+.form__chat{
+    border: 3px solid #ABCDEF;
+    margin: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form__chat * {
+    margin: 5px;
+    height: auto;
+    width: fit-content;
+    border-radius: 8px;
+    padding: 8px;
+    word-wrap: break-word;
+    display: inline-block;
+    max-width: 100%;
+    clear: both;
+}
+.user__message {
+    align-self: flex-end;
+    border: 3px solid #bcefab;
+}
+.map__message, .error__message {
+    align-self: flex-end;
+    text-align: right;
+    border: 3px solid #638bf7;
+    text-decoration: none;
+    }
+
+.server__message {
+    border: 3px solid #efabab;
+}
+
+button{
+    background-color: #ABCDEF;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #77abe0;
+}
