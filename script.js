@@ -45,6 +45,14 @@ if ("geolocation" in navigator) {
     }, (error) => {
         writeMessage('Невозможно определить местоположение: ' + error.message, 'error__message');
     });
+     if (echoMessage.readyState !== WebSocket.OPEN) {
+    writeMessage('Соединение с сервером закрыто', 'error__message');
+    return;
+}
+  if (!messageText.trim()) {
+    writeMessage('Сообщение не может быть пустым', 'error__message');
+    return;
+}
 }
 else {
     writeMessage('Геолокация не поддерживается вашим устройством', 'error__message');
